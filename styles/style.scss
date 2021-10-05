@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+:root {
+    --input-border: #8b8a8b;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%;
+  }
+body{
+    background-color: rgb(215, 243, 240);
+    height: 100vh;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    display:flex;
+    justify-content:center;
+    color:rgb(0, 0, 0);
+}
+
+.form-container{
+    width: 100%;
+    
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+   
+}
+
+.textfield-container{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom:2em;
+    padding:2em;
+    border-radius: 8px;
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    background-color: white;
+
+    .text-container {
+        margin-top:1.5em;
+        width:50%;
+        padding: 0.25em 0.5em;
+        background-color: #fff;
+        border: 2px solid var(--input-border);
+        border-radius: 4px;
+      }
+   
+}
+
+.asterisk-important{
+    color:red;
+    margin:4px;
+}
+
+.button-member{
+    margin-top: 1.5em;;
+    font-family: 'Poppins', sans-serif;
+}
+
+.answer-value{
+    margin-left:8px;
+}
+input{font-family: 'Poppins', sans-serif;}
+
+input[type=submit] {
+    padding: 5px 15px;
+    background: #4bd36d;
+    border: 0 none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin:2em;
+ }

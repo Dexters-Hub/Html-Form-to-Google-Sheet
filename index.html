@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="./styles/style.css">
+    <title>Html-Google-Sheet</title>
+</head>
+<body>
+    <h1>HTML-Google-Sheet</h1>
+    <!-- Form begins here -->
+    <form name='form' method='post'>
+        <div class="form-container">
+            
+
+                <!-- Email Text Field -->
+                <div class="email textfield-container">
+                    <label for="email" class="form-labels">Email<span class="asterisk-important">*</span></label>
+                    <input class="text-container"placeholder="Your email" type="email" name="Email" id="email-id" required>
+                </div>
+
+
+                <!-- Name Text Field -->
+                <div class="name textfield-container">
+                    <label for="name" class="form-labels">Name<span class="asterisk-important">*</span></label>
+                    <input class="text-container" placeholder="Your name" type="text" name="Name" id="name-id" required>
+                </div>
+
+
+                <!-- Branch and Semester Text Field -->
+                <div class="branch_semester textfield-container">
+                    <label for="branch" class="form-labels">Semester and branch (S4 C)<span class="asterisk-important">*</span></label>
+                    <input class="text-container"  placeholder="Your Branch" type="text" name="Semester & Branch" id="branch-id" required>
+                </div>
+
+
+                <!-- Mobile Number Text Field -->
+                <div class="mob-no textfield-container">
+                    <label for="mob" class="form-labels">Mobile Number<span class="asterisk-important">*</span></label>
+                    <input class="text-container"  placeholder="Your mobile no." type="text" name="Mobile Number" id="mob-id" required>
+                </div>
+
+                <!-- isMember or not Text Field -->
+                <div class="member textfield-container">
+                    <label for="member" class="form-labels">Are you an IEEE Member ?<span class="asterisk-important">*</span></label>
+                    <div class="button-member"><input type="radio" value="Yes" name="IEEE Member" id="member-id" required><lable class="answer-value" for="is-member">Yes</lable></div>
+                    <div class="button-member"><input type="radio" value="No" name="IEEE Member" id="member-id" required><lable class="answer-value" for="is-member">No</lable></div>
+                </div>
+                
+
+                <!-- Submit Button -->
+                <div class="submit-button">
+                    <input type="submit" value="Submit">
+                </div>
+            
+        </div>
+    </form>
+
+    <!-- Form Ends here -->
+
+
+    <!-- Script -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw2h_oJikkUZh98GWzF505NV8c6g5b409JL4z-xU01fCHQlqYcV4OYakYT1Bwm27Y2n3w/exec'
+        const form = document.forms['form']
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Your response has been submitted"))
+        .catch(error => console.error('Error!', error.message))
+        })
+        </script>
+
+
+</body>
+</html>
